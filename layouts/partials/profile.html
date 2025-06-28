@@ -1,0 +1,36 @@
+<section class="section container-fluid mt-n3 pb-3">
+  <div class="row justify-content-center">
+    <div class="col-lg-12 text-center">
+      {{/* Access profile data via .Params.section.profile */}}
+      {{- $profile := $.Params.section.profile }}
+
+      {{/* Call the existing img.html partial for image processing */}}
+      {{- $opts := dict
+        "page" .
+        "src" $profile.avatar_image
+        "width" 400
+        "sizes" "100w"
+        "formats" (slice "webp" "jpeg")
+        "process" "fill 200x200"
+        "alt" $profile.name
+        "class" "avatar"
+      }}
+      {{- partial "img.html" $opts }}
+
+      <br />
+      <br />
+      <h1 class="mt-0">{{ $profile.name }}</h1>
+    </div>
+    <div class="col-lg-12 text-center">
+      {{/* Render the role description by processing Markdown */}}
+      <p class="lead">
+        {{ $profile.role | markdownify }}
+      </p>
+
+      {{/* Render the bio paragraph by processing Markdown */}}
+      <p class="lead bio">
+        {{ $profile.bio | markdownify }}
+      </p>
+    </div>
+  </div>
+</section>

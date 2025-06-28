@@ -1,0 +1,31 @@
+# data/profile.toml
+name = "Chowdhury Ahmed Hossain"
+
+# Image for the avatar, matching the 'src' in your snippet
+avatar_image = "images/livingthings.jpg"
+
+# Role description in Markdown
+role = """
+Senior Software Engineer at [Red Hat](https://www.redhat.com/en) | [Thanos](https://thanos.io/tip/thanos/maintainers.md/) & [Observatorium](https://observatorium.io/docs/community/maintainers.md/) Maintainer
+"""
+
+# First bio paragraph in Markdown
+bio = """
+[GSoC 2021](https://summerofcode.withgoogle.com/projects/#5053843303301120) mentee under [CNCF](https://www.cncf.io/) ([Thanos](https://thanos.io/) project) | Observability, Distributed Systems & OSS enthusiast. prev SWE Intern at [MayaData](https://mayadata.io/) ([ChaosNative](https://www.chaosnative.com/)) | Computer Science and Engineering B.Tech graduate from [KIIT](https://kiit.ac.in/)
+"""
+
+# Second bio paragraph in Markdown
+bio_paragraph_1_markdown = """
+prev SWE Intern at [MayaData](https://mayadata.io/) ([ChaosNative](https://www.chaosnative.com/)) | Computer Science and Engineering B.Tech graduate from [KIIT](https://kiit.ac.in/)
+"""
+
+# Social links - meticulously mapped to your provided URLs and Feather icon names
+social_links = [
+  { title = "GitHub", url = "https://github.com/saswatamcode", icon = "github" },
+  { title = "Twitter", url = "https://twitter.com/saswatamcode", icon = "twitter" },
+  { title = "Email", url = "mailto:saswataminsta@yahoo.com", icon = "mail" },
+  { title = "LinkedIn", url = "https://www.linkedin.com/in/saswatamcode/", icon = "linkedin" },
+  { title = "CNCF Slack", url = "https://cloud-native.slack.com/team/U01BDJLJK40", icon = "slack" },
+  { title = "Mastodon", url = "https://hachyderm.io/@saswatamcode", icon = "at-sign" },
+  { title = "Resume", url = "https://drive.google.com/file/d/1uok-m4WWevoXuBJsLsELr2mW-YDX6c7x/view", icon = "file" }
+]
