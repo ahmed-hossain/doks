@@ -1,4 +1,11 @@
 {{ define "main" }}
   {{/*  List all the sections you want to use  */}}
   {{ partial "profile.html" . }}
+
+  {{/*  Background Dots  */}}
+  {{ if site.Params.doks.backgroundDots -}}
+  <div class="d-flex justify-content-start">
+    <div class="bg-dots"></div>
+  </div>
+  {{ end -}}
 {{ end }}

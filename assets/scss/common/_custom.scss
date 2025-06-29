@@ -1,8 +1,18 @@
 // Put your custom SCSS code here
+html {
+  scrollbar-gutter: stable;
+}
+
+img {
+    height: auto;
+}
+
 .content .svg-inline {
     margin-bottom: .5rem;
 }
 
+
+// Intro
 .avatar {
     border-radius: 50%;
     box-shadow: 0 0 40px 6px rgba(0, 0, 0, 0.3);
@@ -10,11 +20,64 @@
 
 .bio {
     margin-top: 2rem;
+    margin-bottom: 1.5rem;
     position: relative;
 }
 
-img {
-    height: auto;
+.bio a {
+    font-weight: 500;
+}
+
+.icon-tabler-arrow-right {
+    margin-right: -0.5rem;
 }
 
 
+// Footer
+.social-footer svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    &:hover {
+        color: $primary;
+    }
+}
+
+.credit-link {
+    color: $secondary;
+    &:hover {
+        color: $primary;
+    }
+    font-weight: 500;
+}
+
+[data-bs-theme="dark"] .credit-link {
+        color: $body-color-dark;
+}
+
+
+// Navbar
+.navbar-nav .nav-link {
+    position: relative;
+    transition: color 0.25s ease-in-out;
+}
+
+.navbar-nav .nav-link::after {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: .25rem;
+    content: "";
+    height: 2px;
+    width: 0%;
+    background-color: $primary;
+    border-radius: 1px;
+    transition: .25s ease-in-out width;
+}
+
+.nav-link:hover::after {
+    width: 85%;
+}
+
+.w-40 {
+    width: 40%;
+}

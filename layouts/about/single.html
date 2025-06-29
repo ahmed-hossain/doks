@@ -1,13 +1,13 @@
 {{ define "main" }}
-<div class="row row-about justify-content-center align-items-center">
-  <div class="col-md-16 col-lg-7">
-    <article>
-      <h1>{{ .Title }}</h1>
-      {{ .Content }}
-    </article>
-  </div>
-  <div class="col-md-16 col-lg-7 text-center">
-    [image]
-  </div>
-</div>
+	<div class="row flex-xl-nowrap">
+		{{ if ne .Params.toc false -}}
+		<nav class="docs-toc{{ if ne site.Params.doks.navbarSticky true }} docs-toc-top{{ end }}{{ if site.Params.doks.headerBar }} docs-toc-offset{{ end }} d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			{{ partial "sidebar/docs-toc-desktop.html" . }}
+		</nav>
+		{{ end -}}
+		<main class="docs-content col-lg-11 mx-xl-auto">
+			<h1>{{ .Params.heading }}</h1>
+			{{ .Content }}
+		</main>
+	</div>
 {{ end }}

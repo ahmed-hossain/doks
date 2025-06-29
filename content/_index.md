@@ -16,9 +16,15 @@ section:
     avatar_image: "images/livingthings.jpg" # Relative to static folder
 
     role: |
-      Ph.D. Student | University of Houston
+      Ph.D. Student | Graduate Research Assistant | University of Houston
 
     bio: |
-      I'm a first-year mechanical engineering PhD student working on developing better materials by changing their internal geometry. My research focuses on understanding the mechanical constituent properties and dynamic responses of bistable auxetic materials. You can read more [about me](/about/) or my [research](/research/)
+      I'm a first-year mechanical engineering PhD student working on developing better materials by changing their internal geometry. My research focuses on understanding the mechanical constituent properties and dynamic responses of bistable auxetic materials.
+    
+    buttons:
+    - label: Learn More About Me 
+      icon: <svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="3 3 20 20"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M13 18l6 -6" /><path d="M13 6l6 6" /></svg>
+      url: "/about/"
+
 ---
 

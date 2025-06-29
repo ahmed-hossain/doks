@@ -13,7 +13,11 @@
     </div>
     {{ block "sidebar-prefooter" . }}{{ end }}
     {{ block "sidebar-footer" . }}{{ end }}
-    {{/*  {{ partial "footer/footer" . }}  */}}
+
+    {{- if not .IsHome }}
+      {{ partial "footer/footer" . }}
+    {{ end -}}
+
     {{ partial "footer/script-footer" . }}
     {{ if eq site.Params.doks.toTopButton true -}}
       {{ partial "footer/to-top" . }}

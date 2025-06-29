@@ -1,18 +1,38 @@
-<footer class="footer text-muted">
+<footer class="footer text-muted py-3">
   <div class="container-{{ site.Params.doks.containerBreakpoint | default "lg" }}">
-    <div class="row">
-      <div class="col-lg-8 text-center text-lg-start">
-        <ul class="list-inline">
+    <div class="row align-items-center justify-content-center justify-content-lg-between">
+      
+      <!-- Left: Copyright -->
+      <div class="col-12 col-lg-6 text-center small text-lg-start mb-2 mb-lg-0">
+        &copy; {{ now.Format "2006" }} {{ .Site.Title }}
+      </div>
+
+      <!-- Center: Social Icons -->
+      <div class="col-12 col-lg-4 text-center mb-2 mb-lg-0">
+        <ul class="list-inline m-0">
+          {{ range .Site.Menus.social }}
+            <li class="list-inline-item my-0">
+              <a class="social-footer text-muted" href="{{ .URL | relURL }}">{{ .Pre | safeHTML }}<small class="ms-2 visually-hidden">{{ .Name | safeHTML }}</small></a>
+            </li>
+          {{ end }}
+        </ul>
+      </div>
+
+      <!-- Right: Credits -->
+      <div class="col-12 col-lg-6 text-center text-lg-end small mb-2 mb-lg-0">
+        Powered by <a href="https://getdoks.org" class="credit-link">Hugo Doks</a> with tweaks.
+      </div>
+
+      <!-- Right: Footer Menu -->
+      {{/*  <div class="col-12 col-lg-4 text-center text-lg-end">
+        <ul class="list-inline m-0">
           {{ range .Site.Menus.footer -}}
-            <li class="list-inline-item"><a class="text-muted" href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+            <li class="list-inline-item">
+              <a class="text-muted" href="{{ .URL | relURL }}">{{ .Name }}</a>
+            </li>
           {{- end }}
         </ul>
-      </div>
-      <div class="col-lg-8 text-center text-lg-end">
-        <ul class="list-inline">
-          <li class="list-inline-item">{{ site.Params.footer | safeHTML }}</li>
-        </ul>
-      </div>
+      </div>  */}}
     </div>
   </div>
 </footer>

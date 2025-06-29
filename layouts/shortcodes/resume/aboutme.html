@@ -1,0 +1,19 @@
+<section class="container-fluid mt-5">
+  <div class="row p-0 justify-content-between gutter-1">
+    <div class="col-lg-6 ps-0 pe-4">
+      {{/* Call the existing img.html partial for image processing */}}
+      {{- $opts := dict
+        "page" .Page
+        "src" .Page.Params.photo
+        "width" 400
+        "formats" (slice "webp" "jpeg")
+        "alt" (.Page.Params.photoalt | default .Page.Site.Params.Title)
+        "class" "w-100"
+      }}
+      {{- partial "img.html" $opts }}
+    </div>
+    <div class="col-lg-10 p-0">
+          {{ .Page.Params.aboutme | markdownify }}
+    </div>
+  </div>
+</section>

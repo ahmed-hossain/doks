@@ -31,6 +31,20 @@
       <p class="lead bio">
         {{ $profile.bio | markdownify }}
       </p>
+
+
+    {{/* CTA Buttons */}}
+    {{ with $profile.buttons }}
+      <div class="row justify-content-center">
+        {{ range . }}
+          <div class="col-12 col-md-auto d-flex justify-content-center px-2">
+            <a class="btn btn-outline-primary btn-cta rounded-pill btn-lg my-3" href="{{ .url }}" role="button">{{ .label }} {{.icon | safeHTML }}</a>
+          </div>
+        {{ end }}
+      </div>
+    {{ end }}
+
+
     </div>
   </div>
 </section>

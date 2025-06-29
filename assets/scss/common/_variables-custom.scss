@@ -1,13 +1,18 @@
 // Put your custom SCSS variables here
 
 // Light mode
-$primary: #836b00;
+$primary: #DC2525;
+$body-bg: #f7f7f7;
+$body-bg-dark: #342f2f;
+
+$card-bg: #fcfcfc;
+$card-bg-dark: #737272;
 
 // Dark mode
-$link-color-dark: aquamarine;
-$button-color-dark: aquamarine;
+$link-color-dark: #DC2525;
+$button-color-dark: #DC2525;
 
 :root,
 ::backdrop {
-  --sl-color-accent-high: aquamarine;
+  --sl-color-accent-high: #DC2525;
 }
